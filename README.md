@@ -7,3 +7,5 @@ Para dar de alta un dominio.
 Para apuntar un dominio a uno existente en el servidor
 ## blockIP.sh
 Para bloquear un IP específica utilizando UFW
+## list-domain.sh
+Para listar los dominios activos

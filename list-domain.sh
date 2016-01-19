@@ -3,8 +3,9 @@ clear
 echo
 echo  LISTADO DE DOMINIOS ACTIVADOS:
 echo
-ls -F /var/www/ | grep '/$' > listado-dominios
-tr '/' ' ' <listado-dominios |tee
-rm -f listado-dominios
+du -shc /var/www/* > ~/listado-dominios
+perl -pi -e "s[/var/www/][-> ]g" ~/listado-dominios
+cat ~/listado-dominios
+rm -f ~/listado-dominios
 echo
 echo

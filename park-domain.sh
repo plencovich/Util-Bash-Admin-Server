@@ -1,8 +1,11 @@
 #!/bin/bash
-echo "Ingrese el dominio a parkear: "
+echo "  Ingrese el dominio a parkear: "
 read DominioPark
-echo "Ingrese el dominio Padre: "
+echo.
+echo.
+echo "  Ingrese el dominio Padre: "
 read DominioOrigianl
+echo.
 echo "<VirtualHost *:80>" > $DominioPark.conf
 echo "	ServerName $DominioPark" >> $DominioPark.conf
 echo "	ServerAlias www.$DominioPark" >> $DominioPark.conf
@@ -29,4 +32,4 @@ clear
 sudo service apache2 restart
 echo 
 echo 
-echo "El Dominio: '$DominioPark' se ha agregado y apudta a '$DominioOrigianl' Ok"
+echo "El Dominio: '$DominioPark' se ha agregado y apunta a '$DominioOrigianl' Ok"
